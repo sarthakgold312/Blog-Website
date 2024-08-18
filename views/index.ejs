@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Blog Home</title>
+  <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+  <%- include('partials/header') %>
+  <h1>Blog Posts</h1>
+  <a href="/new-post">Create New Post</a>
+  <ul>
+    <% posts.forEach(post => { %>
+      <li>
+        <h2><a href="/post/<%= post._id %>"><%= post.title %></a></h2>
+        <p><%= post.content.substring(0, 100) %>...</p>
+      </li>
+    <% }) %>
+  </ul>
+  <%- include('partials/footer') %>
+</body>
+</html>

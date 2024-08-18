@@ -1,0 +1,15 @@
+# Ignore build artifacts
+build/*
+dist/*
+
+# Ignore log files
+*.log
+.env
+node_modules
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore virtual environment
+venv/
